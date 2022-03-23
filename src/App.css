@@ -42,7 +42,7 @@ body {
   padding: 10px;
   border: none;
   width: 250px;
-  background: #e7e7e7e1;
+  background: #e7e7e786;
   color: #9b9a9a;
   font-size: 14px;
   box-shadow: 0px 0px 5px #d1d1d1bd;
@@ -76,7 +76,7 @@ a {
   align-items: center;
   text-decoration: none;
   margin: 10px;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: #74747485;
   text-transform: uppercase;
@@ -101,7 +101,6 @@ a:hover {
   width: 90%;
   font-weight: 200;
   font-size: 2rem;
-
   text-align: center;
   letter-spacing: 1px;
   color: #3eaa1dad;
@@ -160,7 +159,7 @@ a:hover {
   width: 20px;
   margin: -30px;
   border-radius: 50%;
-  background: #353535;
+  background: #a7a7a7;
   width: 40px;
   height: 40px;
   position: relative;
@@ -184,12 +183,10 @@ a:hover {
   background-position: center;
 }
 .Page-title {
-  padding-bottom: 20px;
-  height: 150px;
+  padding-bottom: 10px;
+  height: 120px;
   display: flex;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -197,6 +194,7 @@ a:hover {
 }
 .Page-title h2 {
   margin: 0px;
+  font-size: 1.5rem;
 }
 .FootCont {
   width: 100%;
@@ -214,6 +212,87 @@ a:hover {
   align-items: center;
   border-bottom: 2px solid #ddddddb0;
   padding-bottom: 20px;
+}
+.CalcCont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  flex-wrap: wrap;
+}
+.PaymentOutput {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  padding: 5px;
+  width: 80vw;
+  max-width: 300px;
+  text-align: center;
+  background: #e7e7e709;
+  color: #9b9a9a;
+  font-size: 14px;
+  box-shadow: 0px 0px 5px #d1d1d1bd;
+  transition: all 0.3s;
+  margin: 20px;
+  margin-top: 60px;
+}
+
+.PaymentOutput span {
+  margin-left: 20px;
+  color: #3eaa1dad;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.CalcBody {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  background: #e7e7e709;
+  padding: 15px;
+  font-size: 14px;
+  box-shadow: 0px 0px 5px #d1d1d1bd;
+}
+.InputCont input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #8080804b;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.InputCont input:focus {
+  border-radius: 8px;
+  outline: 2px solid grey;
+}
+.Down {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.Down:focus {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.CalcBody div {
+  display: flex;
+  margin: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+}
+.CalcBody label {
+  width: 150px;
 }
 .FootCont p {
   font-size: 12px;
@@ -233,7 +312,7 @@ footer {
   font-weight: 200;
 }
 a .navImg {
-  width: 20px;
+  width: 15px;
   margin-right: 10px;
 }
 @media only screen and (max-width: 600px) {
@@ -243,6 +322,7 @@ a .navImg {
     width: 100%;
   }
   .SearchBox {
+    display: none;
     justify-content: center;
   }
   a span {
