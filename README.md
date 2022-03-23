@@ -4,7 +4,7 @@
 
 ---
 
-#### React.js Application For Calculating Diffrent Financal Payments
+#### React.js Application For Calculating Different Financal Payments
 
 
 ---
