@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MortgageCalc } from "./MortgageCalc";
 import { CommaGen } from "../utils/CommaGen";
+import FadeIn from "react-fade-in";
 function MortgageComp() {
   const [Principal, setPrincipal] = useState(300000);
   const [DownPayment, setDownPayment] = useState(60000);
@@ -8,15 +9,19 @@ function MortgageComp() {
   const [Term, setTerm] = useState(30);
   const [propertyTax, setPropertyTax] = useState(200);
   const [Insurance, setInsurance] = useState(100);
+  const [HOA, setHOA] = useState(120);
   return (
     <div>
       <div className="Page-title Hero ">
-        <h2> Mortgage Calculator</h2>
-        <p>
-          Tool to estimate monthly mortgage payments with taxes, insurance, PMI,
-          HOA fees & more.
-        </p>
+        <FadeIn>
+          <h2> Mortgage Calculator</h2>
+          <p>
+            Tool to estimate monthly mortgage payments with taxes, insurance,
+            PMI, HOA fees & more.
+          </p>
+        </FadeIn>
       </div>
+
       <div className="PageCont">
         <div className="CalcCont">
           <div className="CalcBody">
@@ -94,13 +99,25 @@ function MortgageComp() {
                 placeholder="Insurance"
               />
             </div>
+            <div className="InputCont">
+              <label>HOA Fee</label>
+              <input
+                step="1"
+                type="number"
+                value={HOA}
+                onChange={(e) => setHOA(e.target.value)}
+                id="term"
+                placeholder="HOA"
+              />
+            </div>
           </div>
           <div className="PaymentOutput">
             <p>Monthly Payment:</p>
             <span id="MonthlyPayment">
               $
               {CommaGen(
-                parseInt(Insurance) +
+                parseInt(HOA) +
+                  parseInt(Insurance) +
                   parseInt(propertyTax) +
                   MortgageCalc(Principal, InterestRate, DownPayment, Term)
               )}

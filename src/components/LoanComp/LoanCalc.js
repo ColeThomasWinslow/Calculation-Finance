@@ -1,6 +1,6 @@
-export function LoanCalc(principal, yearlyInterestRate, downPayment, term) {
+export function LoanCalc(principal, yearlyInterestRate, term) {
   // Calculate Vars
-  const RemainingAmount = principal - downPayment;
+  const RemainingAmount = principal;
   const MonthlyInterestRate = yearlyInterestRate / 12 / 100;
   const NumberOfPayments = term * 12;
 

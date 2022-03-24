@@ -1,53 +1,72 @@
 import React, { useState } from "react";
 import { CommaGen } from "../utils/CommaGen";
 import { SavingsCalc } from "./SavingsCalc";
+import FadeIn from "react-fade-in/lib/FadeIn";
 function SavingComp() {
-  const [Principal, setPrincipal] = useState(300000);
-  const [DownPayment, setDownPayment] = useState(60000);
+  const [Principle, setPrinciple] = useState(300000);
+  const [Frequency, setFrequency] = useState("7");
   const [InterestRate, setInterestRate] = useState(4.5);
+  const [Contribution, setContribution] = useState(50);
   const [Term, setTerm] = useState(30);
-  const [propertyTax, setPropertyTax] = useState(200);
-  const [Insurance, setInsurance] = useState(100);
+
   return (
     <div>
       <div className="Page-title Hero ">
-        <h2>Savings Calculator</h2>
-        <p>
-          Tool to determine how much your money can grow over time. Calculate
-          interest growth with your savings accounts.
-        </p>
+        <FadeIn>
+          <h2>Savings Calculator</h2>
+          <p>
+            Tool to determine how much your money can grow over time. Calculate
+            interest growth with your savings accounts.
+          </p>
+        </FadeIn>
       </div>
       <div className="PageCont">
         <div className="CalcCont">
           <div className="CalcBody">
             <div className="InputCont">
-              <label>Home Price</label>
+              <label>Principal</label>
               <input
                 step="5000"
                 type="number"
-                value={Principal}
-                onChange={(e) => setPrincipal(e.target.value)}
-                id="principal"
+                value={Principle}
+                onChange={(e) => setPrinciple(e.target.value)}
+                id="Principle"
                 placeholder="Home Price"
               />
             </div>
             <div className="InputCont">
-              <label>Down Payment</label>
+              <label>Contribution</label>
               <input
+                step="1"
                 type="number"
-                step="1000"
-                value={DownPayment}
-                onChange={(e) => setDownPayment(e.target.value)}
-                id="downPayment"
-                placeholder="Down Payment"
+                value={Contribution}
+                onChange={(e) => setContribution(e.target.value)}
+                id="term"
+                placeholder="Loan Term"
               />
             </div>
-            <div>
-              <label>Percent Down</label>
+            <div className="InputCont">
+              <label>Frequency</label>
+              <select
+                onChange={(e) => setFrequency(e.target.value)}
+                id="frequency"
+              >
+                <option value="7">Weekly</option>
+                <option value="14">Bi-weekly</option>
+                <option value="30">Monthly</option>
+                <option value="91">Quarterly</option>
+                <option value="364">Annually</option>
+              </select>
+            </div>
+            <div className="InputCont">
+              <label>Time Frame </label>
               <input
-                disabled
-                className="Down"
-                value={`${Math.round((DownPayment / Principal) * 100)}%`}
+                step="1"
+                type="number"
+                value={Term}
+                onChange={(e) => setTerm(e.target.value)}
+                id="term"
+                placeholder="Loan Term"
               />
             </div>
             <div className="InputCont">
@@ -61,48 +80,19 @@ function SavingComp() {
                 placeholder="Interest Rate"
               />
             </div>
-            <div className="InputCont">
-              <label>Loan Term</label>
-              <input
-                step="1"
-                type="number"
-                value={Term}
-                onChange={(e) => setTerm(e.target.value)}
-                id="term"
-                placeholder="Loan Term"
-              />
-            </div>
-            <div className="InputCont">
-              <label>Property Taxes</label>
-              <input
-                step="1"
-                type="number"
-                value={propertyTax}
-                onChange={(e) => setPropertyTax(e.target.value)}
-                id="term"
-                placeholder="Loan Term"
-              />
-            </div>
-            <div className="InputCont">
-              <label>Insurance</label>
-              <input
-                step="1"
-                type="number"
-                value={Insurance}
-                onChange={(e) => setInsurance(e.target.value)}
-                id="term"
-                placeholder="Insurance"
-              />
-            </div>
           </div>
           <div className="PaymentOutput">
-            <p>Monthly Payment:</p>
+            <p>Results:</p>
             <span id="MonthlyPayment">
               $
               {CommaGen(
-                parseInt(Insurance) +
-                  parseInt(propertyTax) +
-                  SavingsCalc(Principal, InterestRate, DownPayment, Term)
+                SavingsCalc(
+                  Principle,
+                  InterestRate,
+                  Frequency,
+                  Contribution,
+                  Term
+                )
               )}
             </span>
           </div>

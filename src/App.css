@@ -90,15 +90,14 @@ a:hover {
   height: 40vh;
   display: flex;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid #ddddddb0;
 }
 .Hero h2 {
-  width: 90%;
+  width: 100%;
+  padding: 5px;
   font-weight: 200;
   font-size: 2rem;
   text-align: center;
@@ -153,15 +152,16 @@ a:hover {
   box-shadow: 1px 1px 3px #29292934;
 }
 .PhoneImg {
-  margin-bottom: -59px;
+  width: 250px;
+  margin-bottom: -79px;
 }
 .CalcIcon {
   width: 20px;
   margin: -30px;
   border-radius: 50%;
-  background: #a7a7a7;
-  width: 40px;
-  height: 40px;
+  background: #535353;
+  width: 42px;
+  height: 42px;
   position: relative;
   top: -20px;
   left: 82px;
@@ -171,6 +171,18 @@ a:hover {
   z-index: 1;
   width: 25px;
   height: 25px;
+}
+.Fade {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Fade div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .TitleBox {
   padding: 10px;
@@ -183,8 +195,7 @@ a:hover {
   background-position: center;
 }
 .Page-title {
-  padding-bottom: 10px;
-  height: 120px;
+  height: 140px;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -257,7 +268,9 @@ a:hover {
   font-size: 14px;
   box-shadow: 0px 0px 5px #d1d1d1bd;
 }
-.InputCont input {
+.InputCont input,
+select {
+  width: 70%;
   padding: 10px;
   font-size: 14px;
   border-radius: 5px;

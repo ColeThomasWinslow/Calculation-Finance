@@ -1,7 +1,7 @@
 import React from "react";
 import Mortgage from "../../icons/House.svg";
 import Savings from "../../icons/Savings.svg";
-import Retirement from "../../icons/Retirement.svg";
+
 import Loan from "../../icons/Loan.svg";
 import { Link } from "react-router-dom";
 function NavElements() {
@@ -18,10 +18,6 @@ function NavElements() {
       <Link to="/Loan">
         <img src={Loan} alt="Loan" className="navImg" />
         <span>Loan Calculator</span>
-      </Link>
-      <Link to="/Retirement">
-        <img src={Retirement} alt="Mortgage" className="navImg" />
-        <span>Retirement Calculator</span>
       </Link>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
-import MortgageCalc from "../../icons/Calc.png";
+import MortgageCalc from "../../icons/CalcMortgage.png";
+import CalcLoan from "../../icons/CalcLoan.png";
 import CalcImg from "../../icons/CalcImg.svg";
 function CalculatorPreviews() {
   const Previews = [
@@ -13,23 +14,16 @@ function CalculatorPreviews() {
     {
       id: 2,
       title: "Savings Calculator",
-      img: MortgageCalc,
+      img: CalcLoan,
       description:
         "Tool to determine how much your money can grow over time. Calculate interest growth with your savings accounts.",
     },
     {
       id: 3,
       title: "Loan Calculator",
-      img: MortgageCalc,
+      img: CalcLoan,
       description:
         "Tool for calculations of common loan types such as mortgages, auto loans, student loans, or personal loans. Get your monthly payment.",
-    },
-    {
-      id: 4,
-      title: "Retirement Calculator",
-      img: MortgageCalc,
-      description:
-        "Tool to estimate how much money you need to retire? Determine what your savings goal should be and what age you can expect to retire.",
     },
   ];
   return (
