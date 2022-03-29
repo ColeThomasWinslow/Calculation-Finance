@@ -3,11 +3,11 @@ import { CommaGen } from "../utils/CommaGen";
 import { SavingsCalc } from "./SavingsCalc";
 import FadeIn from "react-fade-in/lib/FadeIn";
 function SavingComp() {
-  const [Principle, setPrinciple] = useState(300000);
+  const [Principle, setPrinciple] = useState(0);
   const [Frequency, setFrequency] = useState("7");
-  const [InterestRate, setInterestRate] = useState(4.5);
+  const [InterestRate, setInterestRate] = useState(1.35);
   const [Contribution, setContribution] = useState(50);
-  const [Term, setTerm] = useState(30);
+  const [Term, setTerm] = useState(1);
 
   return (
     <div>
@@ -35,7 +35,7 @@ function SavingComp() {
               />
             </div>
             <div className="InputCont">
-              <label>Contribution</label>
+              <label>Contribution ($)</label>
               <input
                 step="1"
                 type="number"
@@ -59,7 +59,7 @@ function SavingComp() {
               </select>
             </div>
             <div className="InputCont">
-              <label>Time Frame </label>
+              <label>Time Frame (yrs) </label>
               <input
                 step="1"
                 type="number"
@@ -87,11 +87,11 @@ function SavingComp() {
               $
               {CommaGen(
                 SavingsCalc(
-                  Principle,
                   InterestRate,
-                  Frequency,
                   Contribution,
-                  Term
+                  Principle,
+                  Term,
+                  Frequency
                 )
               )}
             </span>

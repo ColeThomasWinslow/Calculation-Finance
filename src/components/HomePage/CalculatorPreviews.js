@@ -1,5 +1,6 @@
 import React from "react";
 import MortgageCalc from "../../icons/CalcMortgage.png";
+import SavingsCalc from "../../icons/CalcSavings.png";
 import CalcLoan from "../../icons/CalcLoan.png";
 import CalcImg from "../../icons/CalcImg.svg";
 function CalculatorPreviews() {
@@ -14,7 +15,7 @@ function CalculatorPreviews() {
     {
       id: 2,
       title: "Savings Calculator",
-      img: CalcLoan,
+      img: SavingsCalc,
       description:
         "Tool to determine how much your money can grow over time. Calculate interest growth with your savings accounts.",
     },
