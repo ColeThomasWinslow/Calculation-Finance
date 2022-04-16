@@ -98,10 +98,10 @@ a:hover {
 .Hero h2 {
   width: 100%;
   padding: 5px;
-  font-weight: 200;
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
   text-align: center;
-  letter-spacing: 1px;
+
   color: #3eaa1dad;
 }
 .Hero p {
@@ -118,7 +118,7 @@ a:hover {
 }
 .PageCont {
   width: 100%;
-  min-height: 80vh;
+  border-bottom: 2px solid #ddddddb0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -139,8 +139,26 @@ a:hover {
   margin: 40px;
   max-width: 230px;
 }
+.Graphic {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddddddb0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.GraphicText {
+  width: 90vw;
+  margin-left: 100px;
+  max-width: 400px;
+}
+.GraphicText p {
+  line-height: 30px;
+}
 .Description {
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +171,7 @@ a:hover {
   box-shadow: 1px 1px 3px #29292934;
 }
 .PhoneImg {
-  width: 190px;
+  width: 250px;
   margin-bottom: -79px;
 }
 .CalcIcon {
@@ -193,8 +211,7 @@ a:hover {
   border-radius: 2px;
   box-shadow: 0px 0px 5px #d1d1d1bd;
   background: #fcfefe;
-  font-weight: 200;
-  color: #3eaa1dad;
+
   background-position: center;
 }
 .Page-title {
@@ -256,10 +273,10 @@ a:hover {
 
 .PaymentOutput span {
   margin-left: 20px;
-  color: #3eaa1dad;
+  color: grey;
+
   font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-weight: 400;
 }
 .CalcBody {
   display: flex;
@@ -312,6 +329,34 @@ select {
 .CalcBody label {
   width: 150px;
 }
+.DefCont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.DefCard {
+  padding: 8px;
+  width: 80vw;
+  max-width: 800px;
+  padding-left: 20px;
+  background: #e7e7e709;
+  color: #9b9a9a;
+  font-size: 14px;
+  box-shadow: 0px 0px 5px #d1d1d1bd;
+  margin: 10px;
+}
+.DefBody {
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  max-width: 1000px;
+  flex-direction: column;
+}
+.DefBody h2 {
+  margin-top: 30px;
+  width: 80vw;
+  max-width: 820px;
+}
 .FootCont p {
   font-size: 12px;
   margin: 0px;
@@ -342,9 +387,14 @@ a .navImg {
     justify-content: center;
     margin-left: 40px;
   }
+  .GraphicText {
+    margin-left: 0px;
+    text-align: center;
+  }
   .Nav {
     justify-content: center;
   }
+
   .SearchBox {
     display: none;
     justify-content: center;

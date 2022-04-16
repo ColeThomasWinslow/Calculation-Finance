@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MortgageCalc } from "./MortgageCalc";
 import { CommaGen } from "../utils/CommaGen";
 import FadeIn from "react-fade-in";
+import Definitions from "./Definitions";
 function MortgageComp() {
   const [Principal, setPrincipal] = useState(300000);
   const [DownPayment, setDownPayment] = useState(60000);
@@ -21,7 +22,6 @@ function MortgageComp() {
           </p>
         </FadeIn>
       </div>
-
       <div className="PageCont">
         <div className="CalcCont">
           <div className="CalcBody">
@@ -125,6 +125,7 @@ function MortgageComp() {
           </div>
         </div>
       </div>
+      <Definitions />
     </div>
   );
 }

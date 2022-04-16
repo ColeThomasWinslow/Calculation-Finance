@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CommaGen } from "../utils/CommaGen";
 import { LoanCalc } from "./LoanCalc";
 import FadeIn from "react-fade-in/lib/FadeIn";
+import Definitions from "./Definitions";
 function LoanComp() {
   const [Principal, setPrincipal] = useState(20000);
   const [InterestRate, setInterestRate] = useState(5);
@@ -9,8 +10,8 @@ function LoanComp() {
 
   return (
     <div>
-      <div className="Page-title Hero ">
-        <FadeIn className="Fade">
+      <div className="Page-title  ">
+        <FadeIn className="Fade Hero">
           <h2> Loan Calculator</h2>
           <p>
             Use this loan calculator tool for a simple calculation of your
@@ -63,6 +64,7 @@ function LoanComp() {
           </div>
         </div>
       </div>
+      <Definitions />
     </div>
   );
 }

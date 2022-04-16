@@ -7,6 +7,7 @@ import SavingComp from "./components/SavingsComp/SavingComp";
 import LoanComp from "./components/LoanComp/LoanComp";
 
 import Footer from "./components/Footer/Footer";
+import BlogComponent from "./components/Blog/BlogComponent";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Mortgage" element={<MortgageComp />} />
           <Route path="/Savings" element={<SavingComp />} />
           <Route path="/Loan" element={<LoanComp />} />
+          <Route path="/Blog" element={<BlogComponent />} />
         </Routes>
         <Footer />
       </Router>

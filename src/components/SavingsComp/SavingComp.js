@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CommaGen } from "../utils/CommaGen";
 import { SavingsCalc } from "./SavingsCalc";
 import FadeIn from "react-fade-in/lib/FadeIn";
+import Definitions from "./Definitions";
 function SavingComp() {
   const [Principle, setPrinciple] = useState(0);
   const [Frequency, setFrequency] = useState("7");
@@ -11,7 +12,7 @@ function SavingComp() {
 
   return (
     <div>
-      <div className="Page-title Hero ">
+      <div className="Page-title Hero HeroHeader ">
         <FadeIn>
           <h2>Savings Calculator</h2>
           <p>
@@ -98,6 +99,7 @@ function SavingComp() {
           </div>
         </div>
       </div>
+      <Definitions />
     </div>
   );
 }
