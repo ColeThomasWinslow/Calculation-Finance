@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { MortgageCalc } from "./MortgageCalc";
 import { CommaGen } from "../utils/CommaGen";
-import FadeIn from "react-fade-in";
+import House from "../../icons/house.png";
+
 import Definitions from "./Definitions";
 function MortgageComp() {
   const [Principal, setPrincipal] = useState(300000);
@@ -14,13 +15,11 @@ function MortgageComp() {
   return (
     <div>
       <div className="Page-title Hero ">
-        <FadeIn>
-          <h2> Mortgage Calculator</h2>
-          <p>
-            Tool to estimate monthly mortgage payments with taxes, insurance,
-            PMI, HOA fees & more.
-          </p>
-        </FadeIn>
+        <h2> Mortgage Calculator</h2>
+        <p>
+          Tool to estimate monthly mortgage payments with taxes, insurance, PMI,
+          HOA fees & more.
+        </p>
       </div>
       <div className="PageCont">
         <div className="CalcCont">
@@ -111,20 +110,23 @@ function MortgageComp() {
               />
             </div>
           </div>
-          <div className="PaymentOutput">
-            <p>Monthly Payment:</p>
-            <span id="MonthlyPayment">
-              $
-              {CommaGen(
-                parseInt(HOA) +
-                  parseInt(Insurance) +
-                  parseInt(propertyTax) +
-                  MortgageCalc(Principal, InterestRate, DownPayment, Term)
-              )}
-            </span>
+          <div className="Pillar">
+            <div className="PaymentOutput">
+              <p>Monthly Payment:</p>
+              <span id="MonthlyPayment">
+                $
+                {CommaGen(
+                  parseInt(HOA) +
+                    parseInt(Insurance) +
+                    parseInt(propertyTax) +
+                    MortgageCalc(Principal, InterestRate, DownPayment, Term)
+                )}
+              </span>{" "}
+            </div>{" "}
+            <img src={House} alt="House" width="160px" />
           </div>
-        </div>
-      </div>
+        </div>{" "}
+      </div>{" "}
       <Definitions />
     </div>
   );

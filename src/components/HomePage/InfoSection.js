@@ -3,7 +3,7 @@ import money from "./money.png";
 function InfoSection() {
   return (
     <div className="Graphic">
-      <img src={money} alt="MoneyImg" />
+      <img src={money} alt="MoneyImg" width="300px" />
       <div className="GraphicText">
         <h2> Get the most from your money</h2>
         <p>

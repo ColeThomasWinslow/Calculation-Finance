@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { CommaGen } from "../utils/CommaGen";
+import calc from "../../icons/calculator.png";
 import { LoanCalc } from "./LoanCalc";
-import FadeIn from "react-fade-in/lib/FadeIn";
+
 import Definitions from "./Definitions";
 function LoanComp() {
   const [Principal, setPrincipal] = useState(20000);
@@ -10,14 +11,12 @@ function LoanComp() {
 
   return (
     <div>
-      <div className="Page-title  ">
-        <FadeIn className="Fade Hero">
-          <h2> Loan Calculator</h2>
-          <p>
-            Use this loan calculator tool for a simple calculation of your
-            monthly payment along with interest paid on the loan.
-          </p>
-        </FadeIn>
+      <div className="Page-title Hero ">
+        <h2> Loan Calculator</h2>
+        <p>
+          Use this loan calculator tool for a simple calculation of your monthly
+          payment along with interest paid on the loan.
+        </p>
       </div>
       <div className="PageCont">
         <div className="CalcCont">
@@ -56,11 +55,14 @@ function LoanComp() {
               />
             </div>
           </div>
-          <div className="PaymentOutput">
-            <p>Monthly Payment:</p>
-            <span id="MonthlyPayment">
-              ${CommaGen(LoanCalc(Principal, InterestRate, Term))}
-            </span>
+          <div className="Pillar">
+            <div className="PaymentOutput">
+              <p>Monthly Payment:</p>
+              <span id="MonthlyPayment">
+                ${CommaGen(LoanCalc(Principal, InterestRate, Term))}
+              </span>
+            </div>{" "}
+            <img src={calc} alt="House" />
           </div>
         </div>
       </div>

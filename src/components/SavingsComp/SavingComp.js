@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { CommaGen } from "../utils/CommaGen";
+// import Savings from "../../icons/savings.png";
 import { SavingsCalc } from "./SavingsCalc";
-import FadeIn from "react-fade-in/lib/FadeIn";
+
 import Definitions from "./Definitions";
 function SavingComp() {
   const [Principle, setPrinciple] = useState(0);
@@ -13,13 +14,11 @@ function SavingComp() {
   return (
     <div>
       <div className="Page-title Hero HeroHeader ">
-        <FadeIn>
-          <h2>Savings Calculator</h2>
-          <p>
-            Tool to determine how much your money can grow over time. Calculate
-            interest growth with your savings accounts.
-          </p>
-        </FadeIn>
+        <h2>Savings Calculator</h2>
+        <p>
+          Tool to determine how much your money can grow over time. Calculate
+          interest growth with your savings accounts.
+        </p>
       </div>
       <div className="PageCont">
         <div className="CalcCont">
@@ -82,20 +81,23 @@ function SavingComp() {
               />
             </div>
           </div>
-          <div className="PaymentOutput">
-            <p>Results:</p>
-            <span id="MonthlyPayment">
-              $
-              {CommaGen(
-                SavingsCalc(
-                  InterestRate,
-                  Contribution,
-                  Principle,
-                  Term,
-                  Frequency
-                )
-              )}
-            </span>
+          <div className="Pillar">
+            <div className="PaymentOutput">
+              <p>Results:</p>
+              <span id="MonthlyPayment">
+                $
+                {CommaGen(
+                  SavingsCalc(
+                    InterestRate,
+                    Contribution,
+                    Principle,
+                    Term,
+                    Frequency
+                  )
+                )}
+              </span>
+            </div>{" "}
+            {/* <img src={Savings} alt="House" width="120px" /> */}
           </div>
         </div>
       </div>
